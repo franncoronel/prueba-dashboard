@@ -48,10 +48,10 @@ function renderSparklineCell(params: GridCellParams<SparkLineData, any>) {
   );
 }
 
-function renderStatus(status: 'Online' | 'Offline') {
+function renderStatus(status: 'Asignada' | 'Libre') {
   const colors: { [index: string]: 'success' | 'default' } = {
-    Online: 'success',
-    Offline: 'default',
+    Asignada: 'success',
+    Libre: 'default',
   };
 
   return <Chip label={status} color={colors[status]} size="small" />;
@@ -79,10 +79,10 @@ export function renderAvatar(
 }
 
 export const columns: GridColDef[] = [
-  { field: 'pageTitle', headerName: 'Page Title', flex: 1.5, minWidth: 200 },
+  { field: 'classroomName', headerName: 'Aula', flex: 1.5, minWidth: 200 },
   {
     field: 'status',
-    headerName: 'Status',
+    headerName: 'Estado',
     flex: 0.5,
     minWidth: 80,
     renderCell: (params) => renderStatus(params.value as any),
@@ -131,8 +131,8 @@ export const columns: GridColDef[] = [
 export const rows: GridRowsProp = [
   {
     id: 1,
-    pageTitle: 'Homepage Overview',
-    status: 'Online',
+    classroomName: 'A1',
+    status: 'Asignada',
     eventCount: 8345,
     users: 212423,
     viewsPerUser: 18.5,
@@ -146,8 +146,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 2,
-    pageTitle: 'Product Details - Gadgets',
-    status: 'Online',
+    classroomName: 'A2',
+    status: 'Libre',
     eventCount: 5653,
     users: 172240,
     viewsPerUser: 9.7,
@@ -159,8 +159,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 3,
-    pageTitle: 'Checkout Process - Step 1',
-    status: 'Offline',
+    classroomName: 'A3',
+    status: 'Asignada',
     eventCount: 3455,
     users: 58240,
     viewsPerUser: 15.2,
@@ -174,8 +174,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 4,
-    pageTitle: 'User Profile Dashboard',
-    status: 'Online',
+    classroomName: 'A4',
+    status: 'Asignada',
     eventCount: 112543,
     users: 96240,
     viewsPerUser: 4.5,
@@ -189,8 +189,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 5,
-    pageTitle: 'Article Listing - Tech News',
-    status: 'Offline',
+    classroomName: 'A5',
+    status: 'Libre',
     eventCount: 3653,
     users: 142240,
     viewsPerUser: 3.1,
@@ -204,8 +204,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 6,
-    pageTitle: 'FAQs - Customer Support',
-    status: 'Online',
+    classroomName: 'A6',
+    status: 'Asignada',
     eventCount: 106543,
     users: 15240,
     viewsPerUser: 7.2,
@@ -218,8 +218,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 7,
-    pageTitle: 'Product Comparison - Laptops',
-    status: 'Offline',
+    classroomName: 'A7',
+    status: 'Libre',
     eventCount: 7853,
     users: 32240,
     viewsPerUser: 6.5,
@@ -232,8 +232,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 8,
-    pageTitle: 'Shopping Cart - Electronics',
-    status: 'Online',
+    classroomName: 'A8',
+    status: 'Libre',
     eventCount: 8563,
     users: 48240,
     viewsPerUser: 4.3,
@@ -247,8 +247,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 9,
-    pageTitle: 'Payment Confirmation - Bank Transfer',
-    status: 'Offline',
+    classroomName: 'A9',
+    status: 'Asignada',
     eventCount: 4563,
     users: 18240,
     viewsPerUser: 2.7,
@@ -261,8 +261,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 10,
-    pageTitle: 'Product Reviews - Smartphones',
-    status: 'Online',
+    classroomName: 'A10',
+    status: 'Libre',
     eventCount: 9863,
     users: 28240,
     viewsPerUser: 5.1,
@@ -276,8 +276,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 11,
-    pageTitle: 'Subscription Management - Services',
-    status: 'Offline',
+    classroomName: 'A11',
+    status: 'Asignada',
     eventCount: 6563,
     users: 24240,
     viewsPerUser: 4.8,
@@ -291,8 +291,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 12,
-    pageTitle: 'Order Tracking - Shipments',
-    status: 'Online',
+    classroomName: 'A12',
+    status: 'Libre',
     eventCount: 12353,
     users: 38240,
     viewsPerUser: 3.5,
@@ -306,8 +306,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 13,
-    pageTitle: 'Customer Feedback - Surveys',
-    status: 'Offline',
+    classroomName: 'A13',
+    status: 'Asignada',
     eventCount: 5863,
     users: 13240,
     viewsPerUser: 2.3,
@@ -320,8 +320,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 14,
-    pageTitle: 'Account Settings - Preferences',
-    status: 'Online',
+    classroomName: 'A14',
+    status: 'Libre',
     eventCount: 7853,
     users: 18240,
     viewsPerUser: 3.2,
@@ -334,8 +334,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 15,
-    pageTitle: 'Login Page - Authentication',
-    status: 'Offline',
+    classroomName: 'A15',
+    status: 'Asignada',
     eventCount: 9563,
     users: 24240,
     viewsPerUser: 2.5,
@@ -349,8 +349,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 16,
-    pageTitle: 'Promotions - Seasonal Sales',
-    status: 'Online',
+    classroomName: 'A16',
+    status: 'Libre',
     eventCount: 13423,
     users: 54230,
     viewsPerUser: 7.8,
@@ -363,8 +363,8 @@ export const rows: GridRowsProp = [
   },
   {
     id: 17,
-    pageTitle: 'Tutorials - How to Guides',
-    status: 'Offline',
+    classroomName: 'A17',
+    status: 'Asignada',
     eventCount: 4234,
     users: 19342,
     viewsPerUser: 5.2,
