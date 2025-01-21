@@ -79,12 +79,12 @@ export function renderAvatar(
 }
 
 export const columns: GridColDef[] = [
-  { field: 'classroomName', headerName: 'Aula', flex: 1.5, minWidth: 200 },
+  { field: 'classroomName', headerName: 'Aula', flex: 1, minWidth: 150 },
   {
     field: 'status',
     headerName: 'Estado',
     flex: 0.5,
-    minWidth: 80,
+    minWidth: 100,
     renderCell: (params) => renderStatus(params.value as any),
   },
   {

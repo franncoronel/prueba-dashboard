@@ -17,11 +17,11 @@ const mainListItems = [
   { text: 'Home', icon: <HomeRoundedIcon /> },
   { text: 'Analytics', icon: <AnalyticsRoundedIcon /> },
   { text: 'Clients', icon: <PeopleRoundedIcon /> },
-  { text: 'Tasks', icon: <AssignmentRoundedIcon /> },
+  { text: 'Solicitudes', icon: <AssignmentRoundedIcon /> },
 ];
 
 const secondaryListItems = [
-  { text: 'Settings', icon: <SettingsRoundedIcon /> },
+  { text: 'Configuración', icon: <SettingsRoundedIcon /> },
   { text: 'About', icon: <InfoRoundedIcon /> },
   { text: 'Feedback', icon: <HelpRoundedIcon /> },
 ];
